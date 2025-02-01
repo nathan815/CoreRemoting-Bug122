@@ -22,7 +22,7 @@ namespace CoreRemotingTest.Client
             {
                 ServerHostName = "localhost",
                 //Serializer = new BinarySerializerAdapter(),
-                MessageEncryption = false,
+                //MessageEncryption = false,
                 ServerPort = 9090
             });
 

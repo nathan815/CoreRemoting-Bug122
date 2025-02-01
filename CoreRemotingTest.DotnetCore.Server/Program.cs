@@ -3,11 +3,6 @@ using CoreRemoting.DependencyInjection;
 using CoreRemoting.Serialization;
 using CoreRemoting.Serialization.Binary;
 using CoreRemotingTest.Shared;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CoreRemotingTest.Server
 {
@@ -49,7 +44,7 @@ namespace CoreRemotingTest.Server
             {
                 HostName = "localhost",
                 NetworkPort = 9090,
-                MessageEncryption = false,
+                //MessageEncryption = false,
                 //Serializer = new BinarySerializerAdapter(),
                 RegisterServicesAction = container =>
                 {
