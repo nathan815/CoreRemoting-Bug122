@@ -31,6 +31,8 @@ namespace CoreRemotingTest.Client
             // Establish connection to server
             client.Connect();
 
+            Console.WriteLine("Connected.");
+
             // Creates proxy for remote service
             var proxy = client.CreateProxy<ISayHelloService>();
 
@@ -44,7 +46,7 @@ namespace CoreRemotingTest.Client
             Console.WriteLine("\nEntered chat. Type 'quit' to leave.");
 
             bool quit = false;
-
+            
             while (!quit)
             {
                 var text = Console.ReadLine();
