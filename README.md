@@ -3,19 +3,37 @@
 https://github.com/theRainbird/CoreRemoting/issues/122
 
 ## Info
-Visual Studio 17.12.4
+Running on Visual Studio 17.12.4
 
-Server - .NET Framework 4.7.2
+5 projects:
 
-Client - .NET Core 8.0
+* CoreRemotingTest.DotnetFramework.Server - .NET Framework 4.7.2
+
+* CoreRemotingTest.DotnetFramework.Client - .NET Framework 4.7.2
+
+* CoreRemotingTest.DotnetCore.Server - .NET Core 8.0
+
+* CoreRemotingTest.DotnetCore.Client - .NET Core 8.0
+
+* CoreRemotingTest.Shared - .NET Standard 2.0
+
+Any variation of cross-framework server/client fails with the type error:
+
+| Server | Client | Result |
+| --- | --- | --- |
+| .NET Framework | .NET Framework | OK |
+| .NET Core | .NET Core | OK |
+| .NET Framework | .NET Core | Error |
+| .NET Core | .NET Framework | Error |
+
 
 ## Screenshot of output
 
-Left: Server, Right: Client
+Left: DotnetFramework.Server, Right: DotnetCore.Client
 
 ![image](https://github.com/user-attachments/assets/3fde95c8-3f4f-4f19-9ba2-0adcd2b3b295)
 
-## Output - Server
+## Output - DotnetFramework.Server
 
 ```
 
@@ -50,7 +68,7 @@ Error resolving type specified in JSON 'System.String[], System.Private.CoreLib,
 -----------------------------------
 ```
 
-## Output - Client
+## Output - DotnetCore.Client
 
 ```
 Connecting...
