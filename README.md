@@ -1,5 +1,7 @@
 # Repro for theRainbird/CoreRemoting#122
 
+Cross framework JSON serialization errors in CoreRemoting. CrossFrameworkSerialization assembly redirection methods are meant to address this, but they appear to not be working.
+
 https://github.com/theRainbird/CoreRemoting/issues/122
 
 ## Info
